@@ -2,7 +2,7 @@ package com.twitter.poruke;
 /**
  * Klasa koja predstavlja Twitter poruku.
  * @author anadzudovic
- * @version 0.0.1
+ * @version 1.0
  *
  */
 public class TwitterPoruka {
