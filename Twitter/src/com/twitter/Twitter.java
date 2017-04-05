@@ -29,7 +29,7 @@ public class Twitter {
 	
 	public void unesi(String korisnik, String poruka) { 
         TwitterPoruka tp = new TwitterPoruka(); 
-        tp.setKorisnik("korisnik");
+        tp.setKorisnik(korisnik);
         tp.setPoruka(poruka);  
         poruke.addLast(tp); 
         }  
@@ -50,12 +50,14 @@ public class Twitter {
 		 if (maxBroj<=0) maxBroj = 100;     
 		 int brojac = 0; 
 		TwitterPoruka[] rezultat = new TwitterPoruka[maxBroj]; 
-		 for (int i = 0; i < poruke.size(); i++) 
-			 if (poruke.get(i).getPoruka().indexOf(tag)!=-1)
+		 for (int i = 0; i < poruke.size(); i++){ 
+			 if (poruke.get(i).getPoruka().indexOf(tag)!=-1){
 				 if (brojac < maxBroj){ 
-					 rezultat[brojac+1]=poruke.get(i); brojac++; 
+					 rezultat[brojac]=poruke.get(i); brojac++; 
 					 }
 				 else break; 
+			 }
+		 }
 		     return rezultat;
 		} 
 
